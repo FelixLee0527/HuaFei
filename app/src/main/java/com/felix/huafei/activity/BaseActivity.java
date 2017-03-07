@@ -1,19 +1,17 @@
 package com.felix.huafei.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 
-import com.felix.huafei.R;
-
 /**
- * Created by felix on 2017/3/7.
+ * Created by felix on 2017/3/8.
  */
 
-public class MainActivity extends BaseActivity
+public class BaseActivity extends Activity
 {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
     }
 }
