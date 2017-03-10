@@ -74,7 +74,7 @@ public class OrderManager
         DBManager.getInstance().closeDatabase();
     }
 
-    public List<Order> loadConsumerByAll()
+    public List<Order> loadOrderByAll()
     {
         String      queryByAll = "select * from order_form order by id asc";
         List<Order> orderList  = new ArrayList<>();
@@ -88,6 +88,7 @@ public class OrderManager
             while(cursor.moveToNext())
             {
                 Order order = new Order();
+                order.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 order.setOrderId(cursor.getString(cursor.getColumnIndex("order_id")));
                 order.setOrderTime(cursor.getString(cursor.getColumnIndex("order_time")));
                 order.setConsumerId(cursor.getInt(cursor.getColumnIndex("consumer_id")));
@@ -124,7 +125,7 @@ public class OrderManager
         }
         catch(Exception e)
         {
-            Log.e("ConsumerManager", "loadConsumerByAll: " + e);
+            Log.e("ConsumerManager", "loadOrderByAll: " + e);
         }
 
         return orderList;

@@ -2,8 +2,6 @@ package com.felix.huafei.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -50,8 +48,15 @@ public class OrderFormActivity extends BaseActivity implements OrderFormAdapter.
         rvOrderForm.setLayoutManager(new LinearLayoutManager(this));
         rvOrderForm.setAdapter(orderFormAdapter);
 
-        orderList.addAll(orderManager.loadConsumerByAll());
+        orderList.addAll(orderManager.loadOrderByAll());
         Log.d("OrderFormActivity", "onCreate:" + orderList.size());
+
+        tvAllOrderForm.setText("所有订单("+orderList.size()+")");
+        tvNotPayOrderForm.setText("未付款("+orderList.size()+")");
+        tvNotTakeOrderForm.setText("未取货("+orderList.size()+")");
+        tvCompleteOrderForm.setText("已完成("+orderList.size()+")");
+
+
 
         orderFormAdapter.notifyDataSetChanged();
 
