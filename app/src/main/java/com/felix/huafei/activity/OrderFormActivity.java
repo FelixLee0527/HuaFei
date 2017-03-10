@@ -40,14 +40,29 @@ public class OrderFormActivity extends BaseActivity implements OrderFormAdapter.
     {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order_form);
-        ButterKnife.bind(this);
+    }
+
+    @Override
+    public int setContainViewLayout()
+    {
+        return R.layout.activity_order_form;
+    }
+
+    @Override
+    public void initViw()
+    {
         orderManager = new OrderManager(this);
         orderFormAdapter = new OrderFormAdapter(this, R.layout.item_order_form, orderList);
         orderFormAdapter.setOnItemClickListener(this);
         rvOrderForm.setLayoutManager(new LinearLayoutManager(this));
         rvOrderForm.setAdapter(orderFormAdapter);
 
+
+    }
+
+    @Override
+    public void initData()
+    {
         orderList.addAll(orderManager.loadOrderByAll());
         Log.d("OrderFormActivity", "onCreate:" + orderList.size());
 
@@ -56,11 +71,7 @@ public class OrderFormActivity extends BaseActivity implements OrderFormAdapter.
         tvNotTakeOrderForm.setText("未取货("+orderList.size()+")");
         tvCompleteOrderForm.setText("已完成("+orderList.size()+")");
 
-
-
         orderFormAdapter.notifyDataSetChanged();
-
-
     }
 
     @Override

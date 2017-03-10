@@ -3,6 +3,7 @@ package com.felix.huafei.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.felix.huafei.R;
@@ -18,26 +19,27 @@ import butterknife.OnClick;
 
 public class OrderFormDetailActivity extends BaseActivity
 {
-    @BindView(R.id.tv_consumer_account)        TextView tvConsumerAccount;
-    @BindView(R.id.tv_planting_crops)          TextView tvPlantingCrops;
-    @BindView(R.id.tv_planting_area)           TextView tvPlantingArea;
-    @BindView(R.id.tv_consumer_cell_phone)     TextView tvConsumerCellPhone;
-    @BindView(R.id.tv_growth_stage)            TextView tvGrowthStage;
-    @BindView(R.id.tv_remarks)                 TextView tvRemarks;
-    @BindView(R.id.tv_order_time)              TextView tvOrderTime;
-    @BindView(R.id.tv_order_id)                TextView tvOrderId;
-    @BindView(R.id.tv_nitrogenous_price)       TextView tvNitrogenousPrice;
-    @BindView(R.id.tv_nitrogenous_weight)      TextView tvNitrogenousWeight;
-    @BindView(R.id.tv_nitrogenous_total_money) TextView tvNitrogenousTotalMoney;
-    @BindView(R.id.tv_phosphorus_price)        TextView tvPhosphorusPrice;
-    @BindView(R.id.tv_phosphorus_weight)       TextView tvPhosphorusWeight;
-    @BindView(R.id.tv_phosphorus_total_money)  TextView tvPhosphorusTotalMoney;
-    @BindView(R.id.tv_kalium_price)            TextView tvKaliumPrice;
-    @BindView(R.id.tv_kalium_weight)           TextView tvKaliumWeight;
-    @BindView(R.id.tv_kalium_total_money)      TextView tvKaliumTotalMoney;
-    @BindView(R.id.tv_total_money)             TextView tvTotalMoney;
-    @BindView(R.id.btn_back)                   Button   btnBack;
-    @BindView(R.id.btn_start)                  Button   btnStart;
+    @BindView(R.id.tv_consumer_account)        TextView    tvConsumerAccount;
+    @BindView(R.id.tv_planting_crops)          TextView    tvPlantingCrops;
+    @BindView(R.id.tv_planting_area)           TextView    tvPlantingArea;
+    @BindView(R.id.tv_consumer_cell_phone)     TextView    tvConsumerCellPhone;
+    @BindView(R.id.tv_growth_stage)            TextView    tvGrowthStage;
+    @BindView(R.id.tv_remarks)                 TextView    tvRemarks;
+    @BindView(R.id.tv_order_time)              TextView    tvOrderTime;
+    @BindView(R.id.tv_order_id)                TextView    tvOrderId;
+    @BindView(R.id.tv_nitrogenous_price)       TextView    tvNitrogenousPrice;
+    @BindView(R.id.tv_nitrogenous_weight)      TextView    tvNitrogenousWeight;
+    @BindView(R.id.tv_nitrogenous_total_money) TextView    tvNitrogenousTotalMoney;
+    @BindView(R.id.tv_phosphorus_price)        TextView    tvPhosphorusPrice;
+    @BindView(R.id.tv_phosphorus_weight)       TextView    tvPhosphorusWeight;
+    @BindView(R.id.tv_phosphorus_total_money)  TextView    tvPhosphorusTotalMoney;
+    @BindView(R.id.tv_kalium_price)            TextView    tvKaliumPrice;
+    @BindView(R.id.tv_kalium_weight)           TextView    tvKaliumWeight;
+    @BindView(R.id.tv_kalium_total_money)      TextView    tvKaliumTotalMoney;
+    @BindView(R.id.tv_total_money)             TextView    tvTotalMoney;
+    @BindView(R.id.btn_back)                   Button      btnBack;
+    @BindView(R.id.btn_start)                  Button      btnStart;
+
 
 
     private Order order;
@@ -46,13 +48,22 @@ public class OrderFormDetailActivity extends BaseActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_order_form_detail);
-        ButterKnife.bind(this);
-        initData();
+    }
+
+    @Override
+    public int setContainViewLayout()
+    {
+        return R.layout.activity_order_form_detail;
+    }
+
+    @Override
+    public void initViw()
+    {
 
     }
 
-    private void initData()
+    @Override
+    public void initData()
     {
         Bundle bundle = getIntent().getExtras();
         order = (Order) bundle.getSerializable("order");
@@ -98,4 +109,6 @@ public class OrderFormDetailActivity extends BaseActivity
                 break;
         }
     }
+
+
 }

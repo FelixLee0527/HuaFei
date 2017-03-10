@@ -2,6 +2,7 @@ package com.felix.huafei.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +26,7 @@ import butterknife.OnClick;
  * Created by felix on 2017/3/7.
  */
 
-public class MainActivity extends BaseActivity
+public class MainActivity extends AppCompatActivity
 {
     @BindView(R.id.tv_main)           TextView tvMain;
     @BindView(R.id.btn_order_manager) Button   btnOrderManager;
@@ -55,7 +56,7 @@ public class MainActivity extends BaseActivity
     //    }
 
 
-    private void initData()
+    public void initData()
     {
         Order order = new Order();
 
@@ -119,4 +120,6 @@ public class MainActivity extends BaseActivity
                 break;
         }
     }
+
+
 }
