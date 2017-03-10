@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity
             order.setRemarks("无");
             order.setOrderTime(df.format(new Date()));
 
-            order.setPlantingArea(String.valueOf(random.nextInt(100))+"/亩");
+            order.setPlantingArea(String.valueOf(random.nextInt(100)) + "/亩");
             order.setPlantingCrops("水稻");
             order.setGrowthStage("秧苗期");
 
@@ -102,13 +102,18 @@ public class MainActivity extends AppCompatActivity
     @OnClick()
     public void onClick(){}
 
-    @OnClick({R.id.btn_order_manager , R.id.tv_main})
+    @OnClick({R.id.btn_order_manager , R.id.tv_main , R.id.btn_fertilizer_complete})
     public void onClick(View view)
     {
         switch(view.getId())
         {
             case R.id.btn_order_manager:
-                startActivity(new Intent(this,OrderFormActivity.class));
+                startActivity(new Intent(this, OrderFormActivity.class));
+                break;
+
+            case R.id.btn_fertilizer_complete:
+                startActivity(new Intent(this, FertilizerCompleteActivity.class));
+
                 break;
             case R.id.tv_main:
 
@@ -118,6 +123,8 @@ public class MainActivity extends AppCompatActivity
 
                 initData();
                 break;
+
+
         }
     }
 
