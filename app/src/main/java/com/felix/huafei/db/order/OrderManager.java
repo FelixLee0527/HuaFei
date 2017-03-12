@@ -55,17 +55,33 @@ public class OrderManager
         values.put("planting_crops", order.getPlantingCrops());
         values.put("growth_stage", order.getGrowthStage());
 
-        values.put("Nitrogenous_price", order.getNitrogenousPrice());
-        values.put("Phosphorus_price", order.getPhosphorusPrice());
-        values.put("Kalium_price", order.getKaliumPrice());
 
-        values.put("Nitrogenous_weight", order.getNitrogenousWeight());
-        values.put("Phosphorus_weight", order.getPhosphorusWeight());
-        values.put("Kalium_weight", order.getKaliumWeight());
+        values.put("element1_price", order.getElement1Price());
+        values.put("element2_price", order.getElement2Price());
+        values.put("element3_price", order.getElement3Price());
+        values.put("element4_price", order.getElement4Price());
+        values.put("element5_price", order.getElement5Price());
+        values.put("element6_price", order.getElement6Price());
+        values.put("element7_price", order.getElement7Price());
 
-        values.put("Nitrogenous_price_subtotal", order.getNitrogenousPriceSubtotal());
-        values.put("Phosphorus_price_subtotal", order.getPhosphorusPriceSubtotal());
-        values.put("Kalium_price_subtotal", order.getKaliumPriceSubtotal());
+
+        values.put("element1_weight", order.getElement1Weight());
+        values.put("element2_weight", order.getElement2Weight());
+        values.put("element3_weight", order.getElement3Weight());
+        values.put("element4_weight", order.getElement4Weight());
+        values.put("element5_weight", order.getElement5Weight());
+        values.put("element6_weight", order.getElement6Weight());
+        values.put("element7_weight", order.getElement7Weight());
+
+
+        values.put("element1_price_subtotal", order.getElement1PriceSubtotal());
+        values.put("element1_price_subtotal", order.getElement1PriceSubtotal());
+        values.put("element2_price_subtotal", order.getElement2PriceSubtotal());
+        values.put("element3_price_subtotal", order.getElement3PriceSubtotal());
+        values.put("element4_price_subtotal", order.getElement4PriceSubtotal());
+        values.put("element5_price_subtotal", order.getElement5PriceSubtotal());
+        values.put("element6_price_subtotal", order.getElement6PriceSubtotal());
+        values.put("element7_price_subtotal", order.getElement7PriceSubtotal());
 
 
         Log.d("OrderManager", "insertConsumer: " + order.getOrderId() + " " + order.getConsumerId() + " " + order.getConsumerName() + " " + order.getMoney() + " " + order.getPaymentStatus() + " " + order.getOrderStatus() + " " + order.getRemarks());
@@ -102,17 +118,29 @@ public class OrderManager
                 order.setPlantingCrops(cursor.getString(cursor.getColumnIndex("planting_crops")));
                 order.setGrowthStage(cursor.getString(cursor.getColumnIndex("growth_stage")));
 
-                order.setNitrogenousPrice(cursor.getFloat(cursor.getColumnIndex("Nitrogenous_price")));
-                order.setPhosphorusPrice(cursor.getFloat(cursor.getColumnIndex("Phosphorus_price")));
-                order.setKaliumPrice(cursor.getFloat(cursor.getColumnIndex("Kalium_price")));
+                order.setElement1Price(cursor.getFloat(cursor.getColumnIndex("element1_price")));
+                order.setElement2Price(cursor.getFloat(cursor.getColumnIndex("element2_price")));
+                order.setElement3Price(cursor.getFloat(cursor.getColumnIndex("element3_price")));
+                order.setElement4Price(cursor.getFloat(cursor.getColumnIndex("element4_price")));
+                order.setElement5Price(cursor.getFloat(cursor.getColumnIndex("element5_price")));
+                order.setElement6Price(cursor.getFloat(cursor.getColumnIndex("element6_price")));
+                order.setElement7Price(cursor.getFloat(cursor.getColumnIndex("element7_price")));
 
-                order.setNitrogenousWeight(cursor.getFloat(cursor.getColumnIndex("Nitrogenous_weight")));
-                order.setPhosphorusWeight(cursor.getFloat(cursor.getColumnIndex("Phosphorus_weight")));
-                order.setKaliumWeight(cursor.getFloat(cursor.getColumnIndex("Kalium_weight")));
+                order.setElement1Weight(cursor.getFloat(cursor.getColumnIndex("element1_weight")));
+                order.setElement2Weight(cursor.getFloat(cursor.getColumnIndex("element2_weight")));
+                order.setElement3Weight(cursor.getFloat(cursor.getColumnIndex("element3_weight")));
+                order.setElement4Weight(cursor.getFloat(cursor.getColumnIndex("element4_weight")));
+                order.setElement5Weight(cursor.getFloat(cursor.getColumnIndex("element5_weight")));
+                order.setElement6Weight(cursor.getFloat(cursor.getColumnIndex("element6_weight")));
+                order.setElement7Weight(cursor.getFloat(cursor.getColumnIndex("element7_weight")));
 
-                order.setNitrogenousPriceSubtotal(cursor.getFloat(cursor.getColumnIndex("Nitrogenous_price_subtotal")));
-                order.setPhosphorusPriceSubtotal(cursor.getFloat(cursor.getColumnIndex("Phosphorus_price_subtotal")));
-                order.setKaliumPriceSubtotal(cursor.getFloat(cursor.getColumnIndex("Kalium_price_subtotal")));
+                order.setElement1PriceSubtotal(cursor.getFloat(cursor.getColumnIndex("element1_price_subtotal")));
+                order.setElement2PriceSubtotal(cursor.getFloat(cursor.getColumnIndex("element2_price_subtotal")));
+                order.setElement3PriceSubtotal(cursor.getFloat(cursor.getColumnIndex("element3_price_subtotal")));
+                order.setElement4PriceSubtotal(cursor.getFloat(cursor.getColumnIndex("element4_price_subtotal")));
+                order.setElement5PriceSubtotal(cursor.getFloat(cursor.getColumnIndex("element5_price_subtotal")));
+                order.setElement6PriceSubtotal(cursor.getFloat(cursor.getColumnIndex("element6_price_subtotal")));
+                order.setElement7PriceSubtotal(cursor.getFloat(cursor.getColumnIndex("element7_price_subtotal")));
 
 
                 orderList.add(order);

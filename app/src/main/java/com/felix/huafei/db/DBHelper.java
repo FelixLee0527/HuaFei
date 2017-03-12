@@ -70,15 +70,27 @@ public class DBHelper extends SQLiteOpenHelper
                 "  planting_area text,\n" +
                 "  planting_crops text,\n" +
                 "  growth_stage text,\n" +
-                "  Nitrogenous_price float,\n" +
-                "  Phosphorus_price float,\n" +
-                "  Kalium_price float,\n" +
-                "  Nitrogenous_weight float,\n" +
-                "  Phosphorus_weight float,\n" +
-                "  Kalium_weight float,\n" +
-                "  Nitrogenous_price_subtotal float,\n" +
-                "  Phosphorus_price_subtotal float,\n" +
-                "  Kalium_price_subtotal float,\n" +
+                "  element1_price float,\n" +
+                "  element2_price float,\n" +
+                "  element3_price float,\n" +
+                "  element4_price float,\n" +
+                "  element5_price float,\n" +
+                "  element6_price float,\n" +
+                "  element7_price float,\n" +
+                "  element1_weight float,\n" +
+                "  element2_weight float,\n" +
+                "  element3_weight float,\n" +
+                "  element4_weight float,\n" +
+                "  element5_weight float,\n" +
+                "  element6_weight float,\n" +
+                "  element7_weight float,\n" +
+                "  element1_price_subtotal float,\n" +
+                "  element2_price_subtotal float,\n" +
+                "  element3_price_subtotal float,\n" +
+                "  element4_price_subtotal float,\n" +
+                "  element5_price_subtotal float,\n" +
+                "  element6_price_subtotal float,\n" +
+                "  element7_price_subtotal float,\n" +
                 "  FOREIGN KEY (consumer_id, consumer_name) REFERENCES consumer (id, consumer_name)\n" +
                 ");";
 

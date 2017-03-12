@@ -79,19 +79,19 @@ public class OrderFormDetailActivity extends BaseActivity
             tvOrderTime.setText(order.getOrderTime());
             tvOrderId.setText(order.getOrderId());
 
-            tvNitrogenousPrice.setText(String.valueOf(order.getNitrogenousPrice()));
-            tvNitrogenousWeight.setText(String.valueOf(order.getNitrogenousWeight()));
-            tvNitrogenousTotalMoney.setText(String.valueOf(order.getNitrogenousPriceSubtotal()));
+            tvNitrogenousPrice.setText(String.valueOf(order.getElement1Price()));
+            tvNitrogenousWeight.setText(String.valueOf(order.getElement1Weight()));
+            tvNitrogenousTotalMoney.setText(String.valueOf(order.getElement1PriceSubtotal()));
 
-            tvPhosphorusPrice.setText(String.valueOf(order.getPhosphorusPrice()));
-            tvPhosphorusWeight.setText(String.valueOf(order.getPhosphorusWeight()));
-            tvPhosphorusTotalMoney.setText(String.valueOf(order.getPhosphorusPriceSubtotal()));
+            tvPhosphorusPrice.setText(String.valueOf(order.getElement2Price()));
+            tvPhosphorusWeight.setText(String.valueOf(order.getElement2Weight()));
+            tvPhosphorusTotalMoney.setText(String.valueOf(order.getElement2PriceSubtotal()));
 
-            tvKaliumPrice.setText(String.valueOf(order.getPhosphorusPrice()));
-            tvKaliumWeight.setText(String.valueOf(order.getKaliumWeight()));
-            tvKaliumTotalMoney.setText(String.valueOf(order.getKaliumPriceSubtotal()));
+            tvKaliumPrice.setText(String.valueOf(order.getElement3Price()));
+            tvKaliumWeight.setText(String.valueOf(order.getElement3Weight()));
+            tvKaliumTotalMoney.setText(String.valueOf(order.getElement3PriceSubtotal()));
 
-            tvTotalMoney.setText(String.valueOf(order.getNitrogenousPriceSubtotal() + order.getPhosphorusPriceSubtotal() + order.getKaliumPriceSubtotal()));
+            tvTotalMoney.setText(String.valueOf(order.getElement1PriceSubtotal() + order.getElement2PriceSubtotal() + order.getElement3PriceSubtotal()));
 
         }
 

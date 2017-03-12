@@ -82,17 +82,30 @@ public class MainActivity extends AppCompatActivity
             order.setPlantingCrops("水稻");
             order.setGrowthStage("秧苗期");
 
-            order.setPhosphorusPrice(5.0f);
-            order.setNitrogenousPrice(4.0f);
-            order.setKaliumPrice(3.0f);
+            order.setElement1Price(5.0f);
+            order.setElement2Price(3.0f);
+            order.setElement3Price(6.0f);
+            order.setElement4Price(1.0f);
+            order.setElement5Price(2.0f);
+            order.setElement6Price(8.0f);
+            order.setElement7Price(9.0f);
 
-            order.setNitrogenousWeight(3.0f);
-            order.setKaliumWeight(6.0f);
-            order.setPhosphorusWeight(7.0f);
 
-            order.setNitrogenousPriceSubtotal(12.0f);
-            order.setKaliumPriceSubtotal(18.0f);
-            order.setPhosphorusPriceSubtotal(15.0f);
+            order.setElement1Weight(1.0f);
+            order.setElement2Weight(7.0f);
+            order.setElement3Weight(3.0f);
+            order.setElement4Weight(8.0f);
+            order.setElement5Weight(2.0f);
+            order.setElement6Weight(1.0f);
+            order.setElement7Weight(8.0f);
+
+            order.setElement1PriceSubtotal(5.0f);
+            order.setElement2PriceSubtotal(21.0f);
+            order.setElement3PriceSubtotal(18.0f);
+            order.setElement4PriceSubtotal(8.0f);
+            order.setElement5PriceSubtotal(4.0f);
+            order.setElement6PriceSubtotal(8.0f);
+            order.setElement7PriceSubtotal(72.0f);
 
             orderManager.insertOrder(order);
 
