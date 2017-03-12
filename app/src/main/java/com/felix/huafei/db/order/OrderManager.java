@@ -73,6 +73,14 @@ public class OrderManager
         values.put("element6_weight", order.getElement6Weight());
         values.put("element7_weight", order.getElement7Weight());
 
+        values.put("element1_volume", order.getElement1Volume());
+        values.put("element2_volume", order.getElement2Volume());
+        values.put("element3_volume", order.getElement3Volume());
+        values.put("element4_volume", order.getElement4Volume());
+        values.put("element5_volume", order.getElement5Volume());
+        values.put("element6_volume", order.getElement6Volume());
+        values.put("element7_volume", order.getElement7Volume());
+
 
         values.put("element1_price_subtotal", order.getElement1PriceSubtotal());
         values.put("element1_price_subtotal", order.getElement1PriceSubtotal());
@@ -133,6 +141,14 @@ public class OrderManager
                 order.setElement5Weight(cursor.getFloat(cursor.getColumnIndex("element5_weight")));
                 order.setElement6Weight(cursor.getFloat(cursor.getColumnIndex("element6_weight")));
                 order.setElement7Weight(cursor.getFloat(cursor.getColumnIndex("element7_weight")));
+
+                order.setElement1Volume(cursor.getFloat(cursor.getColumnIndex("element1_volume")));
+                order.setElement2Volume(cursor.getFloat(cursor.getColumnIndex("element2_volume")));
+                order.setElement3Volume(cursor.getFloat(cursor.getColumnIndex("element3_volume")));
+                order.setElement4Volume(cursor.getFloat(cursor.getColumnIndex("element4_volume")));
+                order.setElement5Volume(cursor.getFloat(cursor.getColumnIndex("element5_volume")));
+                order.setElement6Volume(cursor.getFloat(cursor.getColumnIndex("element6_volume")));
+                order.setElement7Volume(cursor.getFloat(cursor.getColumnIndex("element7_volume")));
 
                 order.setElement1PriceSubtotal(cursor.getFloat(cursor.getColumnIndex("element1_price_subtotal")));
                 order.setElement2PriceSubtotal(cursor.getFloat(cursor.getColumnIndex("element2_price_subtotal")));

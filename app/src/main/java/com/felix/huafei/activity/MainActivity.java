@@ -99,6 +99,14 @@ public class MainActivity extends AppCompatActivity
             order.setElement6Weight(1.0f);
             order.setElement7Weight(8.0f);
 
+            order.setElement1Volume(1.0f);
+            order.setElement2Volume(7.0f);
+            order.setElement3Volume(3.0f);
+            order.setElement4Volume(8.0f);
+            order.setElement5Volume(2.0f);
+            order.setElement6Volume(1.0f);
+            order.setElement7Volume(8.0f);
+
             order.setElement1PriceSubtotal(5.0f);
             order.setElement2PriceSubtotal(21.0f);
             order.setElement3PriceSubtotal(18.0f);

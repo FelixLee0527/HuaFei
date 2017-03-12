@@ -39,6 +39,14 @@ public class Order implements Serializable
     private float element6Weight;
     private float element7Weight;
 
+    private float element1Volume;
+    private float element2Volume;
+    private float element3Volume;
+    private float element4Volume;
+    private float element5Volume;
+    private float element6Volume;
+    private float element7Volume;
+
     private float element1PriceSubtotal;
     private float element2PriceSubtotal;
     private float element3PriceSubtotal;
@@ -376,5 +384,75 @@ public class Order implements Serializable
     public void setElement7PriceSubtotal(float element7PriceSubtotal)
     {
         this.element7PriceSubtotal = element7PriceSubtotal;
+    }
+
+    public float getElement1Volume()
+    {
+        return element1Volume;
+    }
+
+    public void setElement1Volume(float element1Volume)
+    {
+        this.element1Volume = element1Volume;
+    }
+
+    public float getElement2Volume()
+    {
+        return element2Volume;
+    }
+
+    public void setElement2Volume(float element2Volume)
+    {
+        this.element2Volume = element2Volume;
+    }
+
+    public float getElement3Volume()
+    {
+        return element3Volume;
+    }
+
+    public void setElement3Volume(float element3Volume)
+    {
+        this.element3Volume = element3Volume;
+    }
+
+    public float getElement4Volume()
+    {
+        return element4Volume;
+    }
+
+    public void setElement4Volume(float element4Volume)
+    {
+        this.element4Volume = element4Volume;
+    }
+
+    public float getElement5Volume()
+    {
+        return element5Volume;
+    }
+
+    public void setElement5Volume(float element5Volume)
+    {
+        this.element5Volume = element5Volume;
+    }
+
+    public float getElement6Volume()
+    {
+        return element6Volume;
+    }
+
+    public void setElement6Volume(float element6Volume)
+    {
+        this.element6Volume = element6Volume;
+    }
+
+    public float getElement7Volume()
+    {
+        return element7Volume;
+    }
+
+    public void setElement7Volume(float element7Volume)
+    {
+        this.element7Volume = element7Volume;
     }
 }

@@ -84,6 +84,13 @@ public class DBHelper extends SQLiteOpenHelper
                 "  element5_weight float,\n" +
                 "  element6_weight float,\n" +
                 "  element7_weight float,\n" +
+                "  element1_volume float,\n" +
+                "  element2_volume float,\n" +
+                "  element3_volume float,\n" +
+                "  element4_volume float,\n" +
+                "  element5_volume float,\n" +
+                "  element6_volume float,\n" +
+                "  element7_volume float,\n" +
                 "  element1_price_subtotal float,\n" +
                 "  element2_price_subtotal float,\n" +
                 "  element3_price_subtotal float,\n" +
